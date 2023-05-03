@@ -26,7 +26,7 @@ a {
   position: fixed;
   bottom: 40px;
   right: 40px;
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color-2);
   padding: 1rem;
   border-radius: 100%;
   display: flex;
@@ -37,6 +37,9 @@ a {
   svg {
     color: #fff;
     font-size: 1.3rem
+  }
+  :hover {
+    background-color: var(--secondary-color-3);
   }
 }
 `;

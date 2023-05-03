@@ -10,74 +10,20 @@ import { pricingAnimation } from "../animation";
 
 function Pricing() {
   const [element, controls] = useScroll();
-  const plans = [
-    {
-      name: "Basic",
-      price: 13,
-    },
-    {
-      name: "Pro",
-      price: 35,
-    },
-    {
-      name: "Expert",
-      price: 77,
-    },
-  ];
+  const plans = [];
 
-  const data = [
-    {
-      value: "Full face Rs.250",
-      type: "Basic",
-    },
-    {
-      value: "Cheeks Rs. 90",
-      type: "Basic",
-    },
-    {
-      value: "Jawline Rs.50",
-      type: "Basic",
-    },
-    {
-      value: "Lower Lip Rs.50",
-      type: "Basic",
-    },
-    {
-      value: "Upper Lip Rs.50",
-      type: "Basic",
-    },
-    {
-      value: "Under arms Rs.100",
-      type: "Basic",
-    },
-    {
-      value: "Full Legs Rs.450",
-      type: "Pro",
-    },
-    {
-      value: "Half Legs Rs.300",
-      type: "Pro",
-    },
-    {
-      value: "Daily Backups",
-      type: "Expert",
-    },
-    {
-      value: "One Click Setup",
-      type: "Expert",
-    },
-  ]
+  const data = []
 
   return (
-    <Section ref={element}>
-      <Title value="pricing" />
+    <Section id="tarifs" ref={element}>
+      <Title value="tarifs" />
       <div className="background">
         <img src={pricing1} alt="background" className="bg1" />
         <img src={pricing2} alt="background" className="bg2" />
       </div>
       <div className="pricing__title">
-        <p>Find your pricing plan</p>
-        <h2>Finding the best salons in your city could be time consuming..</h2>
+        <h2>Prestations & Tarifs</h2>
+        <p>Retrouver une partie de nos prestations.</p>
       </div>
       <div className="pricing">
         {plans.map(({ name, price }, index) => {
@@ -123,10 +69,6 @@ function Pricing() {
                     );
                   })}
                 </ul>
-                <div className="pricing__plan__content__actions">
-                  <span>Order Now</span>
-                  <img src={play} alt="Order Now" />
-                </div>
               </div>
             </motion.div>
           )
@@ -157,12 +99,12 @@ overflow: hidden;
 .pricing__title {
   margin: 6rem 10rem;
   p {
-    color: var(--secondary-color);
+    color: var(--secondary-color-2);
     text-transform: uppercase;
     letter-spacing: 0.2rem;
   }
   h2 {
-    color: var(--primary-color);
+    color: var(--primary-color-2);
     font-size: 2rem;
   }
 }

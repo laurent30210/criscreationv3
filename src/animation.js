@@ -9,8 +9,8 @@ export const homeInfoAnimation = {
 };
 
 export const navAnimation = {
-    hidden: { y: -20, opacity: 0 },
-    show: { y: 1, opacity: 1 },
+    hidden: { y: -20},
+    show: { y: 0},
 }
 
 export const servicesAnimations = {
@@ -61,4 +61,12 @@ export const contactAnimation = {
 export const footerTextAnimation = {
     hidden: { x: -200, opacity: 0 },
     show: { x: 1, opacity: 1 },
+};
+export const footerTextAnimationReverse = {
+    hidden: { x: 200, opacity: 0 },
+    show: { x: 1, opacity: 1 },
+};
+export const footerTextAnimationUp = {
+    hidden: { y: 50, opacity: 0 },
+    show: { y: 1, opacity: 1 },
 };

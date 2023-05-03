@@ -67,22 +67,23 @@ function Navbar() {
 }
 
 const Nav = styled(motion.nav)`
-  position: relative;
-
+  position: fixed;
+  top: 0; 
+  left: 0; right: 0;
+  background-color: var(--first-color-1);
   display: flex;
   justify-content: space-between;
-  margin: 0 2rem;
-  color: var(--color-white);
-  padding-top: 2rem;
+  color: var(--secondary-color-3);
   z-index: 1000000;
+  padding: 1rem;
 
   .brand_container {
-    margin: 0 2rem;
+    margin: 0 1rem;
     .toggle {
       display: none;
     }
     a {
-      color: var(--color-white);
+      color: var(--secondary-color-3);
     }
   }
   @media screen and (min-width: 280px) and (max-width: 1080px) {
@@ -120,18 +121,19 @@ const Nav = styled(motion.nav)`
 const Links = styled.ul`
   display: flex;
   gap: 3rem;
+  margin: 0 1rem;
 
   .active {
     a {
-      border-bottom: 0.2rem solid var(--secondary-color);
+      border-bottom: 0.2rem solid var(--color-white);
     }
   }
 
   li {
     a {
-      color: var(--color-white);
+      color: var(--secondary-color-3);
       text-decoration: none;
-      font-weight: 400;
+      font-weight: 500;
       font-size: 0.9rem;
       text-transform: uppercase;
       white-space: nowrap;

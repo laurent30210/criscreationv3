@@ -4,6 +4,10 @@
     --primary-color-2: rgb(174, 226, 255);
     --primary-color-3: rgb(147, 198, 231);
     --secondary-color: rgb(254, 222, 255);
+    --secondary-color-2: rgb(255, 99, 146);
+    --secondary-color-3: rgb(236, 57, 111);
+    --first-color-1: rgb(254, 239, 234);
+    
 
     --color-white: #fff;
     
@@ -28,11 +32,16 @@ html {
 
 body {
     overflow-x: hidden;
+    background-color: var(--first-color-1);
 }
 
 body,
 button {
     font-family: var(--font-family);
+}
+
+.newtab {
+    margin-left: .2rem;
 }
 
 ::-webkit-scrollbar {

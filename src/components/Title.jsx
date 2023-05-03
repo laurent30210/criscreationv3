@@ -16,7 +16,7 @@ h1 {
   transform: translateX(-30%) translateY(20vw) rotate(-90deg);
   font-size: 7rem;
   text-transform: uppercase;
-  color: var(--secondary-color);
+  color: var(--secondary-color-2);
   font-weight: 400;
   @media screen and (min-width: 280px) and (max-width: 1080px) {
     display: none;

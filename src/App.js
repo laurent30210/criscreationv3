@@ -13,17 +13,18 @@ import Price from './components/Price';
 
 function App() {
   return (
-    <motion.div initial="hidden" animate="show">      
-      <ScrollToTop />
-      <Home />
-      <About />
-      <Instagram />
-      <Services />
-      <Portfolio />
-      <Price />
-      <Contact />
-      <Footer />
+    <motion.div initial="hidden" animate="show">  
+        <ScrollToTop />
+        <Home />
+        <About />
+        <Instagram />
+        <Services />
+        <Portfolio />
+        <Price />
+        <Contact />
+        <Footer />    
       </motion.div>  )
 }
+
 
 export default App

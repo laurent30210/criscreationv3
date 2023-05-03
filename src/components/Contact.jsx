@@ -9,7 +9,7 @@ import { TbGps } from 'react-icons/tb';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsPhoneFill } from 'react-icons/bs';
 import { TbAddressBook } from 'react-icons/tb';
-import { MdOutlineDoubleArrow  } from 'react-icons/md';
+import { IoMdOpen  } from 'react-icons/io';
 
 function Contact() {
   const [element, controls] = useScroll();
@@ -26,8 +26,8 @@ function Contact() {
         }}
       >
         <div className="contact__title">
-          <p>Pour nous contacter</p>
-          <h2>Nouveau - Rendez-vous en ligne !</h2>
+          <h2>Pour nous contacter</h2>
+          <p>Rien de plus simple !</p>
         </div>
         <div className="contact__data">
           <div className="contact__data__description">
@@ -37,8 +37,10 @@ function Contact() {
             </p>
             <a className='btn' href='#' target={"_blank"}>
               RENDEZ-VOUS EN LIGNE
+              <IoMdOpen size={10} className="newtab" title='nouvel onglet' />
+
             </a>
-            <div>
+            <div className='contact__data__description__contact'>
               <p>
                 <TbAddressBook size={20} /> 27 rue des bourgades <br/> 30210 Sernhac
               </p>
@@ -50,7 +52,7 @@ function Contact() {
               </p>
               <p>
                 <TbGps  size={20} /> <a href="https://www.google.com/maps/dir//Cris'Creation,+27+Rue+des+Bourgades,+30210+Sernhac" target={'_blank'}>Nous rejoindre</a>
-
+                <IoMdOpen size={10} className="newtab" title='nouvel onglet' />
               </p>
             </div>
           </div>
@@ -58,8 +60,8 @@ function Contact() {
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11497.328463066162!2d4.5503982!3d43.9110977!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b5cf429a7fa2c3%3A0x52df522cd281b0a7!2sCris&#39;Creation!5e0!3m2!1sfr!2sfr!4v1679760586003!5m2!1sfr!2sfr" 
                     width="600" 
                     height="450" 
-                    allowfullscreen="" loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    allowFullScreen="" loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </motion.div>
@@ -68,10 +70,11 @@ function Contact() {
 }
 
 const Section = styled.section`
-min-height: 100vh;
+min-height: 90vh;
 .contact {
-  color: var(--primary-color);
-  margin: 0 18rem;
+  color: var(--primary-color-2);
+  max-width: 950px;
+  margin: auto;
   a {
     color: inherit;
   }
@@ -79,11 +82,11 @@ min-height: 100vh;
     margin: 6rem 0 2rem 0;
     p {
       text-transform: uppercase;
-      color: var(--primary-color);
+      color: var(--primary-color-2);
     }
     h2 {
       font-size: 2rem;
-      color: var(--secondary-color);
+      color: var(--secondary-color-2);
     }
   }
   &__data {
@@ -101,14 +104,20 @@ min-height: 100vh;
         text-align: justify;
         margin-top: 20px;
       }
-      div {
+      &__contact {
         p {
           display: flex;
           align-items: center;
           color: var(--primary-color-3);
           svg {
-            color: var(--primary-color-3);
+            color: var(--secondary-color-2);
             margin-right: 0.8rem;
+          }
+          a {
+            transition: 300ms;
+          }
+          a:hover {
+            color: var(--secondary-color-2);
           }
         }
       }
@@ -137,12 +146,9 @@ min-height: 100vh;
     }
     &__maps {
       iframe {
-        border: 0 0 transparent;
+        border: 0 solid transparent;
       }
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      }
+    }
     }
   }
 }
